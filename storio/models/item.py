@@ -10,9 +10,8 @@ class Item(models.Model):
      id = fields.Integer(string="ID", required=True)
      issues = fields.Text(string="Issues")
      dateAdded = fields.Date(string="Date Added",required=True)
-     model = fields.One2Many('storio.model')
-     pack = fields.One2Many('storio.pack')
-     report = fields.Many2One('storio.report')
+     model = fields.One2many('storio.model')
+     pack = fields.One2many('storio.pack')
      
 #
 #     @api.depends('value')

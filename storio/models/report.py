@@ -10,9 +10,8 @@ class Report(models.Model):
      id = fields.Integer(string="ID")
      date = fields.Date(string="Date")
      description = fields.Text(string="Description")
-     item = fields.One2Many('storio.item')
+     item = fields.One2many('storio.item')
      
-#
 #     @api.depends('value')
 #     def _value_pc(self):
 #         self.value2 = float(self.value) / 100

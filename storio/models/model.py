@@ -11,7 +11,7 @@ class Model(models.Model):
      model = fields.Char(string="Model")
      notes = fields.Text(string="Notes")
      description = fields.Text(string="Description")
-     items = fields.Many2One('storio.item')
+     items = fields.Many2one('storio.item')
      
 #     @api.depends('value')
 #     def _value_pc(self):
