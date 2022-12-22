@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "storio",
+    'name': "Storio",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        App to manage a storage""",
 
     'description': """
-        Long description of module's purpose
+        App with a system with admins and users to manage a storage being able to book packs
     """,
 
     'author': "My Company",
