@@ -1,8 +1,8 @@
 from odoo import models, fields, api
 
 
-class client(models.user):
+class client(models.Model):
 
-    _name = 'storio.client'
+    _inherit = 'storio.user'
 
     bookings = fields.One2many('storio.booking', 'booking_id', string='Client Bookings')

@@ -3,7 +3,7 @@ from odoo import models, fields, api
 
 class user(models.Model):
 
-    _name = 'storio.user'
+    _inherit = 'res.users'
 
     status = fields.Selection(
         [('ENABLED', 'ENABLED'),
