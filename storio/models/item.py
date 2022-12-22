@@ -10,8 +10,8 @@ class Item(models.Model):
      id = fields.Integer(string="ID", required=True)
      issues = fields.Text(string="Issues")
      dateAdded = fields.Date(string="Date Added",required=True)
-     model = fields.Many2one('storio.model')
-     pack = fields.Many2one('storio.pack')
+     model = fields.Many2one('storio.model',string="Model")
+     pack = fields.Many2one('storio.pack',string="Pack")
      
 #
 #     @api.depends('value')
