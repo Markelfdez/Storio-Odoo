@@ -1,0 +1,19 @@
+<odoo>
+  <data>
+      
+    <!-- actions opening views on models -->
+    
+    <record model="ir.actions.act_window" id="storio.action_window_booking">
+      <field name="name">Booking activities</field>
+      <field name="res_model">storio.booking</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    
+    <!-- actions -->
+    
+    <menuitem name="Bookings management" 
+              id="storio.bookingMenu" 
+              parent="storio.menu_root"
+              action="storio.action_window_booking"/>
+  </data>
+</odoo>
