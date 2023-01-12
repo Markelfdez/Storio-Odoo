@@ -1,7 +1,7 @@
 from odoo import models, fields, api
 
 
-class user(models.Model):
+class User(models.Model):
 
     _inherit = 'res.users'
 

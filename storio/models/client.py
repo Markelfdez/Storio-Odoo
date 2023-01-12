@@ -1,7 +1,7 @@
 from odoo import models, fields, api
 
 
-class client(models.Model):
+class Client(models.Model):
 
     _inherit = 'storio.user'
 
