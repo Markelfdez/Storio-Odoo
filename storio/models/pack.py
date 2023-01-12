@@ -11,6 +11,7 @@ class pack(models.Model):
     
     id = fields.Integer(string="Id", required=True)
     description = fields.Text(string="Description")
+    datePackAdd = fields.Date(string="Date Pack Added",required=True)
     packState = fields.Selection(selection=[('Available', 'Available'), ('Unavailable', 'Unavailable')],string='Pack state')
     packType = fields.Selection(selection=[
                                     ('Sound', 'Sound'), 

@@ -1,0 +1,15 @@
+<odoo>
+  <data>
+    
+    <record model="ir.actions.act_window" id="storio.pack_action_window">
+      <field name="name">Packs</field>
+      <field name="res_model">storio.pack</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- actions -->
+    <menuitem name="Packs Management" id="storio.pack_menu" parent="storio.Storio"
+              action="storio.pack_action_window"/>
+    
+  </data>
+</odoo>
