@@ -11,7 +11,7 @@ class Item(models.Model):
      issues = fields.Text(string="Issues")
      dateAdded = fields.Date(string="Date Added",required=True)
      model = fields.Many2one('storio.model',string="Model")
-     pack = fields.Many2one('storio.pack',string="Pack")
+     #pack = fields.Many2one('storio.pack',string="Pack")
      
 #
 #     @api.depends('value')
