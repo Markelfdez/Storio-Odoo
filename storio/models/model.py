@@ -8,9 +8,13 @@ class Model(models.Model):
      name = fields.Char()
      
      id = fields.Integer(string="ID", required=True)
+
      model = fields.Char(string="Model", required=True)
+
      notes = fields.Text(string="Notes")
+
      description = fields.Text(string="Description", required=True)
+
      items = fields.One2many('storio.item', 'model', string="Items")
      
 #     @api.depends('value')
