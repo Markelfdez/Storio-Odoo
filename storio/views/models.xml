@@ -1,0 +1,31 @@
+<odoo>
+	<data>
+
+		<!-- Top menu item -->
+		<menuitem name="Storio"
+			  id="storio.menu_root"/>
+
+		<!-- menu categories -->
+		<menuitem name="Storio"
+			  id="storio.Storio"
+			  parent="storio.menu_root"/>
+
+	</data>
+	<!-- actions opening views on models -->
+	<record model="ir.actions.act_window"
+		id="storio.users_action_window">
+		<field name="name">Storio users</field>
+		<field name="res_model">storio.user</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<!-- actions -->
+	<menuitem name="User Management"
+		  id="storio.menu_users_list"
+		  parent="storio.menu_root"
+		  action="storio.users_action_window"/>
+
+	<record model="ir.ui.view"
+		id="">
+	</record>
+</odoo>
