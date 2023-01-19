@@ -21,4 +21,4 @@ class pack(models.Model):
                                     ('Special', 'Special')],
                                     string='Pack type')
     #items = fields.One2many('storio.item', 'pack', string="Items")
-    bookings = fields.Many2one('storio.booking', string="Bookings")
+    bookings = fields.Many2Many('storio.booking', string="Bookings")
