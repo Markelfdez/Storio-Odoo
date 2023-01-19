@@ -1,0 +1,33 @@
+<odoo>
+	<data>
+
+		<record model="ir.actions.act_window"
+				id="action_list_storio_models">
+			<field name="name">Storio Models</field>
+			<field name="res_model">storio.model</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem id="menu_storio"
+				  name="Storio"/>
+
+		<menuitem id="menu_storio_models"
+				  name="Models"
+				  parent="menu_storio"
+				  action="action_list_storio_models"/>
+
+		<record model="ir.ui.view"
+				id="storio.model_view">
+			<field name="name">Models</field>
+			<field name="model">storio.model</field>
+			<field name="arch" type="xml">
+				<tree string="Model List">
+					<field name="id"/>
+					<field name="name"/>
+					<field name="model"/>
+				</tree>
+			</field>
+		</record>	
+
+	</data>
+</odoo>
