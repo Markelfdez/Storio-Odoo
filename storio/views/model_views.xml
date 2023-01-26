@@ -29,5 +29,37 @@
 			</field>
 		</record>	
 
+		<record model="ir.ui.view"
+				id="storio.model_form">
+			<field name="name">Models</field>
+			<field name="model">storio.model</field>
+			<field name="arch" type="xml">
+				<form string="Model Form">
+					<sheet>
+						<group>
+							<field name="name"/>
+							<field name="model"/>
+							<field name="description"/>
+							<field name="notes"/>
+							<field name="items"/>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>	
+
+		<record model="ir.ui.view"
+				id="storio.model_search">
+			<field name="name">Models</field>
+			<field name="model">storio.model</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="id"/>
+					<field name="name"/>
+					<field name="model"/>
+				</search>
+			</field>
+		</record>	
+
 	</data>
 </odoo>
