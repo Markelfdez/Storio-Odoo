@@ -11,7 +11,7 @@ class Model(models.Model):
      model = fields.Char(string="Model", required=True)
      notes = fields.Text(string="Notes")
      description = fields.Text(string="Description", required=True)
-     items = fields.One2many('storio.item', 'model_id', string="Items")
+     item_ids = fields.One2many('storio.item','model_id', string="Items")
      
 #     @api.depends('value')
 #     def _value_pc(self):
