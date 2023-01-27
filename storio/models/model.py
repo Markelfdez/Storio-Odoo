@@ -1,22 +1,29 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models,fields,api
+from odoo import api, fields, models
+from odoo.exceptions import ValidationError
 
 class Model(models.Model):
-     _name = 'storio.model'
+	_name = 'storio.model'
 
-     name = fields.Char()
+	name = fields.Char(string="Name", required=True)
      
-     id = fields.Integer(string="ID", required=True)
+	id = fields.Integer(string="ID", required=True)
 
-     model = fields.Char(string="Model", required=True)
+	model = fields.Char(string="Model", required=True)
 
-     notes = fields.Text(string="Notes")
+	notes = fields.Text(string="Notes")
 
-     description = fields.Text(string="Description", required=True)
+	description = fields.Text(string="Description", required=True)
 
-     items = fields.One2many('storio.item', 'model', string="Items")
-     
-#     @api.depends('value')
-#     def _value_pc(self):
-#         self.value2 = float(self.value) / 100
+	items = fields.One2many('storio.item', 'model', string="Items")
+
+	@api.multi
+	@api.constrains('model')
+	def _check_if_model_exists(self):
+		modelObj = self.env['storio.model']
+		for record in self:
+			rec = modelObj.search([('model', '=', record.model)])
+			if rec:
+				raise ValidationError("This Model exists already! Model: %s" % record.model)
+
