@@ -18,6 +18,17 @@ class Model(models.Model):
 
 	items = fields.One2many('storio.item', 'model', string="Items")
 
+	@api.onchange('description')
+	def _onchange_description(self):
+		if self.description:
+			if len(self.description) < 10:
+				return {
+					'warning': {
+						'title': "Incorrect 'description' value",
+						'message': self.description + ": value should atleast be 10 characters long"
+				}
+		}
+
 	@api.multi
 	@api.constrains('model')
 	def _check_if_model_exists(self):
