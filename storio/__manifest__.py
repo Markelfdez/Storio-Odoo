@@ -26,7 +26,8 @@
         # 'security/ir.model.access.csv',
         'views/views.xml',
         'views/bookings.xml',
-        #'views/templates.xml',
+        'views/model_views.xml',
+        'views/templates.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
