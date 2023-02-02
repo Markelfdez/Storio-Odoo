@@ -1,0 +1,85 @@
+<odoo>
+    <data>
+        
+        <!-- actions opening views on models -->
+        <<record model="ir.actions.act_window" 
+                id="action_list_create_bookings">
+            <field name="name">Booking</field>
+            <field name="res_model">storio.booking</field>
+            <field name="view_mode">tree,form</field>
+        </record> 
+
+        <!-- actions -->
+        <menuitem id="menu_booking" 
+                  parent="storio.Storio"
+                  name="Booking"/>
+        
+        <menuitem id="menu_booking_create" 
+                  parent="menu_booking"
+                  name="Create booking"
+                  action="action_list_create_booking"/>
+        
+        <!-- explicit list view definition -->
+        <record model="ir.ui.view" id="storio.booking_list">
+            <field name="name">storio booking tree</field>
+            <field name="model">storio.booking</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="id"/>
+                    <field name="description"/>
+                    <field name="endDate"/>
+                    <field name="startDate"/>
+                    <field name="user"/>
+                    <field name="packs"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        
+        <!-- explicit list view definition -->
+        <record model="ir.ui.view" id="storio.booking_form">
+            <field name="name">storio booking form</field>
+            <field name="model">storio.booking</field>
+            <field name="arch" type="xml">
+                <form string="Booking form">
+                    <group colspan="4">
+                        <group col="2">
+                            <separator string="ID" colspan="2"/>
+                            <field name="id"/>
+                            <separator string="User" colspan="2"/>
+                            <field name="user"/>
+                            <separator string="Packs" colspan="2"/>
+                            <field name="packs"/>
+                            <separator string="Booking Dates" colspan="2"/>
+                            <field name="startDate"/>
+                            <field name="endDate"/>
+                        </group>
+                        <group col="2">
+                            <separator string="State" colspan="2"/>
+                            <field name="state"/>
+                        </group>
+                        <group colspan="4" rowspan="8">
+                            <separator string="Sympton" colspan="2"/>
+                            <field name="sympton"/>
+                            <separator string="Description" colspan="2"/>
+                            <field name="description"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+        
+        <!-- explicit list view definition -->
+        <record model="ir.ui.view" id="storio.booking_search">
+            <field name="name">storio booking search</field>
+            <field name="model">storio.booking</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="id"/>
+                    <field name="state"/>
+                    <field name="user"/>
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>
