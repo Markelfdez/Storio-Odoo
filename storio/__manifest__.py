@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "storio",
+    'name': "Storio",
 
     'summary': """
-        Storage app""",
+        App to manage a storage""",
 
     'description': """
-        Storage app""",
+        App with a system with admins and users to manage a storage being able to book packs
+    """,
 
     'author': "My Company",
     'website': "http://www.yourcompany.com",
@@ -24,7 +25,7 @@
     'data': [
         # 'security/ir.model.access.csv',
         'views/views.xml',
-        'views/packView.xml',
+        'views/model_views.xml',
         'views/templates.xml',
     ],
     # only loaded in demonstration mode

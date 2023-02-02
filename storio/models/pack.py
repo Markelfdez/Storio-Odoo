@@ -21,7 +21,7 @@ class pack(models.Model):
                                 ('Tripod', 'Tripod'),
                                 ('Special', 'Special')],
                                 string='Pack type', required=True)
-    #items = fields.One2many('storio.item', 'pack', string="Items")
+    items = fields.One2many('storio.item', 'pack', string="Items")
     bookings = fields.Many2many('storio.booking', string="Bookings")
 
     @api.onchange('description')
@@ -41,4 +41,3 @@ class pack(models.Model):
         for r in self:
             if len(self.name) < 5:
                 raise ValidationError("Name is not valid")
-            

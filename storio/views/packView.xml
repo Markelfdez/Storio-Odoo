@@ -32,7 +32,7 @@
                             <field name="packType"/>
                             <field name="packState"/>
                             <field name="description"/>
-                            <!-- <field name="items"/> -->
+                            <field name="items"/>
                             <field name="bookings"/>
                         </group>
                     </sheet>

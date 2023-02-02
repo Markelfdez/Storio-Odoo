@@ -1,4 +1,5 @@
 <odoo>
+<<<<<<< HEAD
   <data>
     <!-- Top menu item -->
     <menuitem name="Storio" id="storio.menu_root"/>
@@ -6,3 +7,12 @@
     <menuitem name="Storio" id="storio.Storio" parent="storio.menu_root"/>
   </data>
 </odoo>
+=======
+	<data>
+		<!-- Top menu item -->
+		<menuitem name="Storio" id="storio.menu_root"/>
+		<!-- menu categories -->
+		<menuitem name="Storio" id="storio.Storio" parent="storio.menu_root"/>
+	</data>
+</odoo>
+>>>>>>> main
