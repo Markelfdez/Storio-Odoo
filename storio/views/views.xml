@@ -1,13 +1,11 @@
 <odoo>
-  <data>
-
     <!-- Top menu item -->
     <menuitem name="Storio" 
               id="storio.menu_root"/>
     <!-- menu categories -->
     <menuitem name="Storio" 
-              id="Storio.Storio" 
+              id="storio.Storio" 
               parent="storio.menu_root"/>
     
-  </data>
+  
 </odoo>
