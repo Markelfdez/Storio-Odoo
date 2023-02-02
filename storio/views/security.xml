@@ -1,0 +1,7 @@
+<odoo>
+    <data>
+        <record id="item_managers" model="storio.item"> 
+            <field name="name">Item managers</field>
+        </record>
+    </data>
+</odoo>
