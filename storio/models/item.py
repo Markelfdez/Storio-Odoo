@@ -28,4 +28,3 @@ class Item(models.Model):
         if self.iden <= 0:
             
             raise exceptions.ValidationError("ID MAL.")
-            
