@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_storio_storio,storio.storio,model_storio_storio,,1,0,0,0
+manager_storio_items,Item manager,model_storio_item,item_managers,1,1,1,1
+access_storio_items,Item user,model_storio_item,,1,0,0,0

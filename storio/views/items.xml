@@ -1,59 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!-- was: no XML declaration present -->
 <odoo>
-  <data>
-      <!-- tree view for items-->
-      <record model="ir.ui.view" id="storio.itemTree_id">
-          <field name="name">Storio Items</field>
-          <field name="model">storio.item</field>
-          <field name="arch" type="xml">
-              <tree string="Item list">
-                  <field name="iden"/>
-                  <field name="issues"/>
-                  <field name="dateAdded"/>
-              </tree>
-          </field>
-      </record>
+    <data>
+        <!-- tree view for items-->
+        <record model="ir.ui.view" id="storio.itemTree_id">
+            <field name="name">Storio Items</field>
+            <field name="model">storio.item</field>
+            <field name="arch" type="xml">
+                <tree string="Item list">
+                    <field name="iden"/>
+                    <field name="name"/>
+                    <field name="issues"/>
+                    <field name="dateAdded"/>
+                    <field name="model_id"/>
+                </tree>
+            </field>
+        </record>
       
-      <!-- form view for items-->
-      <record model="ir.ui.view" id="storio.itemForm_id">
-          <field name="name">Storio Items</field>
-          <field name="model">storio.item</field>
-          <field name="arch" type="xml">
-              <form string="Item list">
-                  <sheet>
-                      <group>
-                        <field name="iden"/>
-                        <field name="issues"/>
-                        <field name="dateAdded"/>
-                        <field name="model_id"/>
-                    </group>
-                  </sheet>
-              </form>
-          </field>
-      </record>
+        <!-- form view for items-->
+        <record model="ir.ui.view" id="storio.itemForm_id">
+            <field name="name">Storio Items</field>
+            <field name="model">storio.item</field>
+            <field name="arch" type="xml">
+                <form string="Item list">
+                    <sheet>
+                        <group>
+                            <field name="iden"/>
+                            <field name="name"/>
+                            <field name="issues"/>
+                            <field name="dateAdded"/>
+                            <field name="model_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
       
-      <!-- search view for items-->
-      <record model="ir.ui.view" id="storio.itemSearch_id">
-          <field name="name">Storio Items</field>
-          <field name="model">storio.item</field>
-          <field name="priority" eval="16"/>
-          <field name="arch" type="xml">
-              <search string="Item list">
-                  <field name="iden"/>
-                  <field name="model_id"/>
-                  <field name="dateAdded"/>
-              </search>
-          </field>
-      </record>
+        <!-- search view for items-->
+        <record model="ir.ui.view" id="storio.itemSearch_id">
+            <field name="name">Storio Items</field>
+            <field name="model">storio.item</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <search string="Item list">
+                    <field name="name"/>
+                    <field name="issues"/>
+                    <field name="model_id"/>
+                </search>
+            </field>
+        </record>
       
-    <!-- actions opening views on models -->
-    <record model="ir.actions.act_window" id="storio.item_action_window">
-      <field name="name">Storio items</field>
-      <field name="res_model">storio.item</field>
-      <field name="view_mode">tree,form</field>
-    </record>
+        <!-- actions opening views on models -->
+        <record model="ir.actions.act_window" id="storio.item_action_window">
+            <field name="name">Storio items</field>
+            <field name="res_model">storio.item</field>
+            <field name="view_mode">tree,form</field>
+        </record>
 
-    <!-- actions -->
-    <menuitem name="Item management" id="storio.itemsMenu_1_list" parent="storio.menu_1"
-              action="storio.item_action_window"/>
-  </data>
+        <!-- actions -->
+        <menuitem name="Item management" id="storio.itemsMenu_1_list" parent="storio.menu_1"
+                  action="storio.item_action_window"/>
+    </data>
 </odoo>
