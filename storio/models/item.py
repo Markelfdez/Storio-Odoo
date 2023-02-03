@@ -11,6 +11,7 @@ class Item(models.Model):
     issues = fields.Text(string="Issues", default="No issues.")
     dateAdded = fields.Date(string="Date Added", required=True, default=fields.Date.today)
     model_id = fields.Many2one('storio.model', string="Model", required=True)
+    pack = fields.Many2one("storio.pack", string="Pack")
      
     @api.onchange('iden')
     def _onchange_iden(self):

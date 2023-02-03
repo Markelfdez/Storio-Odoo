@@ -43,7 +43,7 @@
         <record model="ir.ui.view" id="storio.pack_search">
             <field name="name">Pack search</field>
             <field name="model">storio.pack</field>
-            <field name="arch" type="xml">
+            <field name="arch" type="xml">  
                 <search>
                     <field name="name"/>
                     <field name="packType"/>
@@ -53,7 +53,7 @@
         </record>
 
         <!-- actions -->
-        <menuitem name="Packs Management" id="storio.pack_menu" parent="storio.Storio"
+        <menuitem name="Packs Management" id="storio.pack_menu" parent="storio.menu_1"
                   action="storio.pack_action_window"/>
     
     </data>

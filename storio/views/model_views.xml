@@ -8,12 +8,9 @@
 			<field name="view_mode">tree,form</field>
 		</record>
 
-		<menuitem id="menu_storio"
-				  name="Storio"/>
-
 		<menuitem id="menu_storio_models"
 				  name="Models"
-				  parent="menu_storio"
+				  parent="storio.menu_1"
 				  action="action_list_storio_models"/>
 
 		<record model="ir.ui.view"
@@ -41,7 +38,7 @@
 							<field name="model"/>
 							<field name="description"/>
 							<field name="notes"/>
-							<field name="items"/>
+							<field name="item_ids"/>
 						</group>
 					</sheet>
 				</form>
