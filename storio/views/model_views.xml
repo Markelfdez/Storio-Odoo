@@ -21,7 +21,6 @@
 				<tree string="Model List">
 					<field name="id"/>
 					<field name="name"/>
-					<field name="model"/>
 				</tree>
 			</field>
 		</record>	
@@ -35,7 +34,6 @@
 					<sheet>
 						<group>
 							<field name="name"/>
-							<field name="model"/>
 							<field name="description"/>
 							<field name="notes"/>
 							<field name="item_ids"/>
@@ -53,7 +51,6 @@
 				<search>
 					<field name="id"/>
 					<field name="name"/>
-					<field name="model"/>
 				</search>
 			</field>
 		</record>	

@@ -5,11 +5,9 @@ from odoo import models, fields, api
 class Model(models.Model):
 	_name = 'storio.model'
 
-	name = fields.Char()
+	name = fields.Char(string="Model", required=True)
      
 	id = fields.Integer(string="ID", required=True)
-
-	model = fields.Char(string="Model", required=True)
 
 	notes = fields.Text(string="Notes")
 
